@@ -32,12 +32,14 @@ PLTR provides a platter of palettes for designers that are indecisive
   - Palette.swift
 
 ### View
-  - ColorListTableView
+  - ColorTableView
   - ColorView
-  - PaletteListTableView
+  - PaletteTableView
   - PaletteView
 
 ### Controller
-  - ColorListTableViewController
-  - PaletteListTableViewController
+  - ColorTableViewController
+  - ColorViewController
+  - PaletteTableViewController
+  - PaletteViewController
 
