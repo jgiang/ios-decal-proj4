@@ -5,7 +5,7 @@
 - Jasmine Giang
 
 ## Purpose
-PLTR provides a platter of color palettes for designers that aren't good with colors
+PLTR provides a platter of palettes for designers that are indecisive
 
 ## Features
 - View popular color palettes currated online by designers
