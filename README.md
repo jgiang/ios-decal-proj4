@@ -19,12 +19,12 @@ PLTR provides a platter of palettes for designers that are indecisive
 - The app will open with a pretty splash page and two tabs
   - Colors tab
     - Displays popular colors
-    - Search bar to search by hue
-    - Clicking on a color shows an enlarged swatch and its hex code
+    - Search bar to search by keyword
+    - Clicking on a color shows an enlarged swatch and relevant info
   - Palettes tab
     - Displays popular palettes
-    - Search bar to search by hue
-    - Clicking on a palette shows enlarged swatches and corresponding hex codes
+    - Search bar to search by keyword
+    - Clicking on a palette shows enlarged swatches and relevant info
 
 ## Implementation
 ### Model
@@ -38,8 +38,8 @@ PLTR provides a platter of palettes for designers that are indecisive
   - PaletteView
 
 ### Controller
-  - ColorTableViewController
+  - ColorListViewController
   - ColorViewController
-  - PaletteTableViewController
+  - PaletteListViewController
   - PaletteViewController
 
