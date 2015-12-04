@@ -11,13 +11,12 @@
 		D3F1BF651C104687001C8861 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D3F1BF631C104687001C8861 /* Main.storyboard */; };
 		D3F1BF671C104687001C8861 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D3F1BF661C104687001C8861 /* Assets.xcassets */; };
 		D3F1BF6A1C104687001C8861 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D3F1BF681C104687001C8861 /* LaunchScreen.storyboard */; };
-		D3F1BF7C1C10B8EE001C8861 /* PaletteTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3F1BF7B1C10B8EE001C8861 /* PaletteTableViewController.swift */; };
-		D3F1BF7E1C10B909001C8861 /* ColorTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3F1BF7D1C10B909001C8861 /* ColorTableViewController.swift */; };
+		D3F1BF7C1C10B8EE001C8861 /* PaletteListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3F1BF7B1C10B8EE001C8861 /* PaletteListViewController.swift */; };
+		D3F1BF7E1C10B909001C8861 /* ColorListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3F1BF7D1C10B909001C8861 /* ColorListViewController.swift */; };
 		D3F1BF801C10B956001C8861 /* PaletteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3F1BF7F1C10B956001C8861 /* PaletteViewController.swift */; };
 		D3F1BF821C10B9A4001C8861 /* ColorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3F1BF811C10B9A4001C8861 /* ColorViewController.swift */; };
 		D3F1BF841C10B9CB001C8861 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3F1BF831C10B9CB001C8861 /* Color.swift */; };
 		D3F1BF861C10B9D6001C8861 /* Palette.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3F1BF851C10B9D6001C8861 /* Palette.swift */; };
-		D3F1BF8A1C10BB08001C8861 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3F1BF891C10BB08001C8861 /* Utils.swift */; };
 		D3F1BF8C1C10BE4F001C8861 /* ColourLoversAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3F1BF8B1C10BE4F001C8861 /* ColourLoversAPI.swift */; };
 /* End PBXBuildFile section */
 
@@ -28,13 +27,12 @@
 		D3F1BF661C104687001C8861 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D3F1BF691C104687001C8861 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D3F1BF6B1C104687001C8861 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		D3F1BF7B1C10B8EE001C8861 /* PaletteTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaletteTableViewController.swift; sourceTree = "<group>"; };
-		D3F1BF7D1C10B909001C8861 /* ColorTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorTableViewController.swift; sourceTree = "<group>"; };
+		D3F1BF7B1C10B8EE001C8861 /* PaletteListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaletteListViewController.swift; sourceTree = "<group>"; };
+		D3F1BF7D1C10B909001C8861 /* ColorListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorListViewController.swift; sourceTree = "<group>"; };
 		D3F1BF7F1C10B956001C8861 /* PaletteViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaletteViewController.swift; sourceTree = "<group>"; };
 		D3F1BF811C10B9A4001C8861 /* ColorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorViewController.swift; sourceTree = "<group>"; };
 		D3F1BF831C10B9CB001C8861 /* Color.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		D3F1BF851C10B9D6001C8861 /* Palette.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Palette.swift; sourceTree = "<group>"; };
-		D3F1BF891C10BB08001C8861 /* Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		D3F1BF8B1C10BE4F001C8861 /* ColourLoversAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColourLoversAPI.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -69,7 +67,6 @@
 			isa = PBXGroup;
 			children = (
 				D3F1BF5D1C104687001C8861 /* AppDelegate.swift */,
-				D3F1BF761C10B5DF001C8861 /* Utils */,
 				D3F1BF631C104687001C8861 /* Main.storyboard */,
 				D3F1BF661C104687001C8861 /* Assets.xcassets */,
 				D3F1BF681C104687001C8861 /* LaunchScreen.storyboard */,
@@ -83,8 +80,8 @@
 		D3F1BF731C10B589001C8861 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				D3F1BF7B1C10B8EE001C8861 /* PaletteTableViewController.swift */,
-				D3F1BF7D1C10B909001C8861 /* ColorTableViewController.swift */,
+				D3F1BF7B1C10B8EE001C8861 /* PaletteListViewController.swift */,
+				D3F1BF7D1C10B909001C8861 /* ColorListViewController.swift */,
 				D3F1BF811C10B9A4001C8861 /* ColorViewController.swift */,
 				D3F1BF7F1C10B956001C8861 /* PaletteViewController.swift */,
 			);
@@ -99,14 +96,6 @@
 				D3F1BF8B1C10BE4F001C8861 /* ColourLoversAPI.swift */,
 			);
 			name = API;
-			sourceTree = "<group>";
-		};
-		D3F1BF761C10B5DF001C8861 /* Utils */ = {
-			isa = PBXGroup;
-			children = (
-				D3F1BF891C10BB08001C8861 /* Utils.swift */,
-			);
-			name = Utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -183,13 +172,12 @@
 			files = (
 				D3F1BF801C10B956001C8861 /* PaletteViewController.swift in Sources */,
 				D3F1BF8C1C10BE4F001C8861 /* ColourLoversAPI.swift in Sources */,
-				D3F1BF7C1C10B8EE001C8861 /* PaletteTableViewController.swift in Sources */,
-				D3F1BF7E1C10B909001C8861 /* ColorTableViewController.swift in Sources */,
+				D3F1BF7C1C10B8EE001C8861 /* PaletteListViewController.swift in Sources */,
+				D3F1BF7E1C10B909001C8861 /* ColorListViewController.swift in Sources */,
 				D3F1BF821C10B9A4001C8861 /* ColorViewController.swift in Sources */,
 				D3F1BF5E1C104687001C8861 /* AppDelegate.swift in Sources */,
 				D3F1BF841C10B9CB001C8861 /* Color.swift in Sources */,
 				D3F1BF861C10B9D6001C8861 /* Palette.swift in Sources */,
-				D3F1BF8A1C10BB08001C8861 /* Utils.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

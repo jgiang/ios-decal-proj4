@@ -1,5 +1,5 @@
 //
-//  PaletteTableViewController.swift
+//  ColorListViewController.swift
 //  PLTR
 //
 //  Created by Jasmine Giang on 12/3/15.
@@ -8,13 +8,18 @@
 
 import UIKit
 
-class PaletteTableViewController: UITableViewController {
+class ColorListViewController: UIViewController {
 
     @IBOutlet var searchbar: UISearchBar!
+    @IBOutlet var tableView: UITableView!
+    
+    var colors : [Color]!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        let api = ColourLoversAPI()
+        api.loadColors(didLoadColors)
+        colors = [Color]()
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -29,25 +34,33 @@ class PaletteTableViewController: UITableViewController {
 
     // MARK: - Table view data source
 
-    override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 0
-    }
 
-    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        return colors.count
     }
 
-    /*
-    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("reuseIdentifier", forIndexPath: indexPath)
-
+    
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath)
+        
         // Configure the cell...
-
+        let color = colors[indexPath.row]
+        cell.textLabel!.text = color.title
+        
+        cell.backgroundColor = UIColor(red: CGFloat(color.red/255), green: CGFloat(color.green/255), blue: CGFloat(color.blue/255), alpha: 1)
         return cell
     }
-    */
+    
+    func searchBarSearchButtonClicked(searchBar: UISearchBar) {
+        searchBar.resignFirstResponder()
+    }
+    
+    func searchBar(searchBar: UISearchBar, textDidChange searchText: String) {
+        let api = ColourLoversAPI()
+        api.loadSearchColors(searchBar.text, completion: didLoadColors)
+    }
+
 
     /*
     // Override to support conditional editing of the table view.
@@ -93,5 +106,23 @@ class PaletteTableViewController: UITableViewController {
         // Pass the selected object to the new view controller.
     }
     */
+    
+    func didLoadColors(colors: [Color]) {
+        self.colors = colors
+        self.tableView.reloadData()
+    }
+    
+    @IBAction func unwind(segue: UIStoryboardSegue) {
+        
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        // Get the new view controller using segue.destinationViewController.
+        // Pass the selected object to the new view controller.
+        let nav = segue.destinationViewController as! UINavigationController
+        let dest = nav.topViewController as! ColorViewController
+        dest.color = colors[tableView.indexPathForSelectedRow!.row]
+        
+    }
 
 }

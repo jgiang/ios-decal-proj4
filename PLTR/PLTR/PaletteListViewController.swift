@@ -1,5 +1,5 @@
 //
-//  ColorTableViewController.swift
+//  PaletteListViewController.swift
 //  PLTR
 //
 //  Created by Jasmine Giang on 12/3/15.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ColorTableViewController: UITableViewController {
+class PaletteListViewController: UIViewController {
 
     @IBOutlet var searchbar: UISearchBar!
     
@@ -29,12 +29,12 @@ class ColorTableViewController: UITableViewController {
 
     // MARK: - Table view data source
 
-    override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
         return 0
     }
 
-    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
         return 0
     }
@@ -93,9 +93,5 @@ class ColorTableViewController: UITableViewController {
         // Pass the selected object to the new view controller.
     }
     */
-    
-    @IBAction func unwind(segue: UIStoryboardSegue) {
-        
-    }
 
 }
