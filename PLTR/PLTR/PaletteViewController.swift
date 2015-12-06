@@ -9,11 +9,25 @@
 import UIKit
 
 class PaletteViewController: UIViewController {
-
+    
+    
+    @IBOutlet weak var imageView: UIImageView!
+    var palette : Palette!
+    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var colorsLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        titleLabel.text = "Title: \(palette.title)"
+        
+        var s = ""
+        for hex in palette.hex_values {
+            s = s + String(hex) + " "
+        }
+        colorsLabel.text = s
+        loadImage(palette, imageView: imageView)
     }
 
     override func didReceiveMemoryWarning() {
@@ -21,6 +35,18 @@ class PaletteViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    
+    func loadImage(palette: Palette, imageView: UIImageView) {
+        let imgURL: NSURL = NSURL(string: palette.imageUrl)!
+        let request: NSURLRequest = NSURLRequest(URL: imgURL)
+        NSURLConnection.sendAsynchronousRequest(
+            request, queue: NSOperationQueue.mainQueue(),
+            completionHandler: {(response: NSURLResponse?,data: NSData?,error: NSError?) -> Void in
+                if error == nil {
+                    imageView.image = UIImage(data: data!)
+                }
+        })
+    }
 
     /*
     // MARK: - Navigation
@@ -32,8 +58,5 @@ class PaletteViewController: UIViewController {
     }
     */
     
-    @IBAction func unwind(segue: UIStoryboardSegue) {
-        
-    }
 
 }
