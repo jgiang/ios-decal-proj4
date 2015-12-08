@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D3EE3F041C1668FD00A402FC /* PaintPalette.png in Resources */ = {isa = PBXBuildFile; fileRef = D3EE3F021C1668FD00A402FC /* PaintPalette.png */; };
+		D3EE3F0A1C166A9D00A402FC /* ColorPicker.png in Resources */ = {isa = PBXBuildFile; fileRef = D3EE3F091C166A9D00A402FC /* ColorPicker.png */; };
 		D3F1BF5E1C104687001C8861 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3F1BF5D1C104687001C8861 /* AppDelegate.swift */; };
 		D3F1BF651C104687001C8861 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D3F1BF631C104687001C8861 /* Main.storyboard */; };
 		D3F1BF671C104687001C8861 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D3F1BF661C104687001C8861 /* Assets.xcassets */; };
@@ -21,6 +23,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D3EE3F021C1668FD00A402FC /* PaintPalette.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = PaintPalette.png; path = ../PaintPalette.png; sourceTree = "<group>"; };
+		D3EE3F091C166A9D00A402FC /* ColorPicker.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = ColorPicker.png; path = ../ColorPicker.png; sourceTree = "<group>"; };
 		D3F1BF5A1C104687001C8861 /* PLTR.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PLTR.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D3F1BF5D1C104687001C8861 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D3F1BF641C104687001C8861 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -68,6 +72,8 @@
 			children = (
 				D3F1BF5D1C104687001C8861 /* AppDelegate.swift */,
 				D3F1BF631C104687001C8861 /* Main.storyboard */,
+				D3EE3F091C166A9D00A402FC /* ColorPicker.png */,
+				D3EE3F021C1668FD00A402FC /* PaintPalette.png */,
 				D3F1BF661C104687001C8861 /* Assets.xcassets */,
 				D3F1BF681C104687001C8861 /* LaunchScreen.storyboard */,
 				D3F1BF6B1C104687001C8861 /* Info.plist */,
@@ -157,8 +163,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D3EE3F0A1C166A9D00A402FC /* ColorPicker.png in Resources */,
 				D3F1BF6A1C104687001C8861 /* LaunchScreen.storyboard in Resources */,
 				D3F1BF671C104687001C8861 /* Assets.xcassets in Resources */,
+				D3EE3F041C1668FD00A402FC /* PaintPalette.png in Resources */,
 				D3F1BF651C104687001C8861 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

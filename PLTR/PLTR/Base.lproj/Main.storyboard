@@ -157,7 +157,7 @@
                             <constraint firstItem="mIX-pa-6W1" firstAttribute="leading" secondItem="16p-3k-R9I" secondAttribute="leading" id="q8O-7N-aWx"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Palettes" id="PwR-aE-bKQ"/>
+                    <tabBarItem key="tabBarItem" title="Palettes" image="PaintPalette.png" selectedImage="PaintPalette.png" id="PwR-aE-bKQ"/>
                     <connections>
                         <outlet property="searchbar" destination="16p-3k-R9I" id="eKW-0v-rgR"/>
                         <outlet property="tableView" destination="mIX-pa-6W1" id="Jft-tF-m0Q"/>
@@ -219,7 +219,7 @@
                             <constraint firstItem="iJV-wc-pIz" firstAttribute="trailing" secondItem="SQo-YD-0fC" secondAttribute="trailing" id="tA4-8X-9TP"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Colors" id="ZWd-s2-qpf"/>
+                    <tabBarItem key="tabBarItem" title="Colors" image="ColorPicker.png" selectedImage="ColorPicker.png" id="ZWd-s2-qpf"/>
                     <connections>
                         <outlet property="searchbar" destination="iJV-wc-pIz" id="LYe-mA-vqk"/>
                         <outlet property="tableView" destination="SQo-YD-0fC" id="5zN-ad-sKc"/>
@@ -424,4 +424,8 @@
             <point key="canvasLocation" x="2220" y="391"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="ColorPicker.png" width="30" height="30"/>
+        <image name="PaintPalette.png" width="30" height="30"/>
+    </resources>
 </document>
