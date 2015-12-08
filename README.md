@@ -13,14 +13,16 @@ PLTR provides a platter of palettes for designers that are indecisive
   - Search for palette with certain hue
 - View popular colors
   - View hex code of the color
+  - Adjust the RGB values of popular colors to find what you want
   - Search for colors with certain hue
 
 ## Control Flow
-- The app will open with a pretty splash page and two tabs
+- The app will open on the Colors tab
   - Colors tab
     - Displays popular colors
     - Search bar to search by keyword
     - Clicking on a color shows an enlarged swatch and relevant info
+      - Adjust the RGB values to find similar shades
   - Palettes tab
     - Displays popular palettes
     - Search bar to search by keyword
