@@ -18,6 +18,16 @@ class ColorViewController: UIViewController {
     @IBOutlet var rgbLabel: UILabel!
     @IBOutlet var descriptionLabel: UILabel!
     
+    
+    @IBOutlet var redLabel: UILabel!
+    @IBOutlet var redSlider: UISlider!
+    @IBOutlet var greenLabel: UILabel!
+    @IBOutlet var greenSlider: UISlider!
+    @IBOutlet var blueLabel: UILabel!
+    @IBOutlet var blueSlider: UISlider!
+    
+    @IBOutlet var currentHexLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -30,8 +40,25 @@ class ColorViewController: UIViewController {
         } else {
             descriptionLabel.text = ""
         }
-        loadImage(color, imageView: imageView)
+        //loadImage(color, imageView: imageView)
+        redLabel.text = "Red: \(color.red)"
+        greenLabel.text = "Green: \(color.green)"
+        blueLabel.text = "Blue: \(color.blue)"
+        imageView.backgroundColor = UIColor(red: CGFloat(color.red/255), green: CGFloat(color.green/255), blue: CGFloat(color.blue/255), alpha: 1)
+        redSlider.value = color.red
+        greenSlider.value = color.green
+        blueSlider.value = color.blue
+        currentHexLabel.text = color.hex
     }
+    
+    @IBAction func sliderMove(sender: UISlider) {
+        redLabel.text = "Red: \(redSlider.value)"
+        greenLabel.text = "Green: \(greenSlider.value)"
+        blueLabel.text = "Blue: \(blueSlider.value)"
+        imageView.backgroundColor = UIColor(red: CGFloat(redSlider.value/255), green: CGFloat(greenSlider.value/255), blue: CGFloat(blueSlider.value/255), alpha: 1)
+        currentHexLabel.text = String(format:"%X", Int(redSlider.value)) + String(format:"%X", Int(greenSlider.value)) + String(format:"%X", Int(blueSlider.value))
+    }
+    
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
