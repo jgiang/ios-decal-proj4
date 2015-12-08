@@ -12,7 +12,7 @@ class ColourLoversAPI {
 
     func loadColors(completion: (([Color]) -> Void)!) {
 
-        let url: NSURL = NSURL(string: "http://www.colourlovers.com/api/colors/top?format=json")!
+        let url: NSURL = NSURL(string: "http://www.colourlovers.com/api/colors/top?numResults=100&sortBy=DESC&format=json")!
         let task = NSURLSession.sharedSession().dataTaskWithURL(url) {
             (data: NSData?, response: NSURLResponse?, error: NSError?) -> Void in
             if error == nil {
@@ -40,7 +40,7 @@ class ColourLoversAPI {
     }
     
     func loadSearchColors(searchString: String!, completion: (([Color]) -> Void)!) {
-        let unencodedUrl = "http://www.colourlovers.com/api/colors?keywords=\(searchString)&format=json"
+        let unencodedUrl = "http://www.colourlovers.com/api/colors?keywords=\(searchString)&numResults=100&sortBy=DESC&format=json"
         let encodedUrl = unencodedUrl.stringByAddingPercentEncodingWithAllowedCharacters( NSCharacterSet.URLQueryAllowedCharacterSet())!
         
         let url: NSURL = NSURL(string: encodedUrl)!
